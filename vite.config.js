@@ -1,23 +1,8 @@
-# Vue Template 💮
+import { fileURLToPath, URL } from 'node:url'
 
-## Installation 🔧
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-### npm 📦
-
-```SH
-npm i -D unplugin-auto-import
-npm i unplugin-vue-components -D
-npm i -D unplugin-icons
-
-npm install element-plus --save
-```
-
-## Configuration 📝
-
-### Vite 🏗️
-
-```JS
-// vite.config.ts
 import AutoImport from 'unplugin-auto-import/vite'
 
 import Components from 'unplugin-vue-components/vite'
@@ -26,8 +11,11 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    vue(),
+
     AutoImport({
       imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
@@ -37,19 +25,11 @@ export default defineConfig({
       resolvers: [ElementPlusResolver(), IconsResolver()],
     }),
 
-    Icons({
-      autoInstall: true,
-    }),
+    Icons({ autoInstall: true }),
   ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })
-```
-
-### Prettier 🪮
-
-```JSON
-// .prettierrc
-{
-  "singleQuote": true,
-  "semi": false
-}
-```
