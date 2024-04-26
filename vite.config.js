@@ -25,7 +25,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver(), IconsResolver()],
     }),
 
-    Icons({ autoInstall: true }),
+    Icons(),
   ],
   resolve: {
     alias: {
