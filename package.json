@@ -15,6 +15,7 @@
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/ep": "^1.1.15",
+    "@iconify/json": "^2.2.204",
     "@vitejs/plugin-vue": "^5.0.4",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-icons": "^0.18.5",
