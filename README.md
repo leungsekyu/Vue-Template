@@ -8,6 +8,7 @@
 npm i -D unplugin-auto-import
 npm i unplugin-vue-components -D
 npm i -D unplugin-icons
+npm i -D @iconify/json
 
 npm install element-plus --save
 ```
@@ -37,9 +38,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver(), IconsResolver()],
     }),
 
-    Icons({
-      autoInstall: true,
-    }),
+    Icons(),
   ],
 })
 ```
