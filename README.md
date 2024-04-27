@@ -45,6 +45,8 @@ export default defineConfig({
 
 ### Prettier 🪮
 
+**Visual Studio Code**
+
 ```JSON
 // .prettierrc
 {
@@ -52,3 +54,9 @@ export default defineConfig({
   "semi": false
 }
 ```
+
+#### SVG Formatting 🪛
+
+1. 选择语言模式
+2. ".svg"的配置文件关联...
+3. HTML
