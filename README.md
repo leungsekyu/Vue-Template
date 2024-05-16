@@ -60,3 +60,9 @@ export default defineConfig({
 1. 选择语言模式
 2. ".svg"的配置文件关联...
 3. HTML
+
+### CSS 🎨
+
+```
+❗️1rem = 1px❗️
+```
