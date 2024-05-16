@@ -1,17 +1,16 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1280px; /* 页面宽度 */
+  margin: 0 auto; /* 水平居中一个块级元素 */
+  padding: 20rem;
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  transition: 0.4s; /* 鼠标悬停过渡效果 */
   padding: 3px;
 }
 
@@ -21,6 +20,7 @@ a,
   }
 }
 
+/* 大尺寸屏幕 */
 @media (min-width: 1024px) {
   body {
     display: flex;
@@ -30,6 +30,6 @@ a,
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    padding: 0 20rem;
   }
 }

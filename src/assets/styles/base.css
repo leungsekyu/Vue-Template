@@ -1,0 +1,40 @@
+@import './theme.css';
+/* border-box setting */
+/* https://css-tricks.com/box-sizing/#aa-universal-box-sizing-with-inheritance */
+/* rem 62.5% setting */
+/* https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/ */
+html {
+  box-sizing: border-box;
+  font-size: 6.25%; /* equivalent to 1px */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* personal preference */
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 16rem; /* equivalent to 16px */
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility; /* 优化文本的可读性：更好的字符间距调整和连字（ligatures）处理 */
+  -webkit-font-smoothing: antialiased; /* 字体抗锯齿 for Safari */
+  -moz-osx-font-smoothing: grayscale; /* 字体灰度抗锯齿 for macOS Firefox */
+}
